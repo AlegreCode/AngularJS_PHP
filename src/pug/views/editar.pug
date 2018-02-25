@@ -1,0 +1,26 @@
+section.row
+  div(class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1")
+    div.well
+      h1.text-center Editar datos de #[strong {{usuario.nombre}}]
+    hr
+    form
+      input(type="hidden", name="id" value="{{usuario.id}}")
+      .form-group
+        label(for='nombre') Nombre
+        input.form-control(type='text', name='nombre' placeholder='Nombre...' ng-model="usuario.nombre" )
+      .form-group
+        label(for='username') Usuario
+        input.form-control(type='text', name='username' placeholder='Usuario...' ng-model="usuario.username" )
+      .form-group
+        label(for='email') Email
+        input.form-control(type='email', name='email' placeholder='Email...' ng-model="usuario.email" )
+      .form-group
+        label(for='password') Contraseña
+        input.form-control(type='password', name='password' placeholder="Contraseña..." ng-model="usuario.password" )
+      .form-group
+        label(for='privilegio') Privilegio
+        input.form-control(type='text' ng-model="usuario.privilegio"  name='privilegio')
+    button.btn.btn-primary(type='button' ng-click="goActualizar(usuario)") Actualizar
+    button.btn.btn-danger(type='button' ng-click="goCancelar()") Cancelar
+    hr
+

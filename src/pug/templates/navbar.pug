@@ -1,0 +1,23 @@
+nav.navbar.navbar-inverse.navbar-static-top(ng-controller="navbarController")
+    .container
+        .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href='' ng-click="goHome()") AngularJS y PHP
+        #navbar.navbar-collapse.collapse
+            ul.nav.navbar-nav
+                li(ng-class="{active : esActivo('/')}")
+                    a(href='' ng-click="goHome()") Home
+                li(ng-class="{active : esActivo('/usuarios')}")
+                    a(href="" ng-click="goUsuarios()") Usuarios
+                li(ng-class="{active : esActivo('/agregar')}")
+                    a(href="" ng-click="goAgregar()") Agregar
+            ul.nav.navbar-nav.navbar-right
+                li(class=(title == 'Log in') ? 'active' : null)
+                    a(href='/login') Log-in
+                li(class=(title == 'Register') ? 'active' : null)
+                    a(href='/register') Register
+//- /.nav-collapse

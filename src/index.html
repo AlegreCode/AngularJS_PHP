@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="app">
+  <head>
+    <base href="/">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngularJS - Coffeescript</title>
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top" ng-controller="navbarController">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="" ng-click="goHome()">AngularJS y PHP</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li ng-class="{active : esActivo('/')}"><a href="" ng-click="goHome()">Home</a></li>
+            <li ng-class="{active : esActivo('/usuarios')}"><a href="" ng-click="goUsuarios()">Usuarios</a></li>
+            <li ng-class="{active : esActivo('/agregar')}"><a href="" ng-click="goAgregar()">Agregar</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/login">Log-in</a></li>
+            <li><a href="/register">Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container" ng-view></main>
+    <footer class="footer"><span class="footer__txt">&copy; 2018 |<span> Autor: Carlos A. Alegre</span></span></footer>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

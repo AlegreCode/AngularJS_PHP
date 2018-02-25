@@ -1,0 +1,27 @@
+section.row
+  div(class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1")
+    div.well
+      h1.text-center Agregar Nuevo Usuario
+    hr
+
+    form
+      div(class="form-group")
+        label(for="nombre") Nombre
+        input(type="text" class="form-control" id="nombre" ng-model="usuario.nombre" name="nombre" placeholder="Nombre...")
+      div(class="form-group")
+        label(for="username") Usuario
+        input(type="text" class="form-control" id="username" ng-model="usuario.username" name="username" placeholder="Usuario...")
+      div(class="form-group")
+        label(for="email") Email
+        input(type="text" class="form-control" id="email" ng-model="usuario.email" name="email" placeholder="Email...")
+      div(class="form-group")
+        label(for="password") Contraseña
+        input(type="text" class="form-control" id="password" ng-model="usuario.password" name="password" placeholder="Contraseña...")
+      div(class="form-group")
+        label(for="privilegio") Privilegio
+        input(type="text" class="form-control" id="privilegio" ng-model="usuario.privilegio" name="privilegio" placeholder="Privilegio...")
+
+      button(type="button" class="btn btn-primary" ng-click="goAgregar(usuario)") Agregar
+      button(type="button" class="btn btn-danger" ng-click="goCancelar()") Cancelar
+    hr
+

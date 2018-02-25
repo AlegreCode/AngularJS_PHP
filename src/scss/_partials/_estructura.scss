@@ -1,0 +1,16 @@
+.estructura {
+    margin-top: 5%;
+    &:last-child {
+        margin-bottom: 10%;
+    }
+    &__blockquote {
+        border-left-color: $brand-primary;
+        color: $brand-primary;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        border-radius: 3px;
+        border-top: 2px solid $gray-lighter;
+        border-right: 2px solid $gray-lighter;
+        border-bottom: 2px solid $gray-lighter;
+    }
+}

@@ -1,0 +1,35 @@
+
+<section class="row">
+  <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
+    <div class="well">
+      <h1 class="text-center">Editar datos de <strong>{{usuario.nombre}}</strong></h1>
+    </div>
+    <hr/>
+    <form>
+      <input type="hidden" name="id" value="{{usuario.id}}"/>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input class="form-control" type="text" name="nombre" placeholder="Nombre..." ng-model="usuario.nombre"/>
+      </div>
+      <div class="form-group">
+        <label for="username">Usuario</label>
+        <input class="form-control" type="text" name="username" placeholder="Usuario..." ng-model="usuario.username"/>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="email" name="email" placeholder="Email..." ng-model="usuario.email"/>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input class="form-control" type="password" name="password" placeholder="Contraseña..." ng-model="usuario.password"/>
+      </div>
+      <div class="form-group">
+        <label for="privilegio">Privilegio</label>
+        <input class="form-control" type="text" ng-model="usuario.privilegio" name="privilegio"/>
+      </div>
+    </form>
+    <button class="btn btn-primary" type="button" ng-click="goActualizar(usuario)">Actualizar</button>
+    <button class="btn btn-danger" type="button" ng-click="goCancelar()">Cancelar</button>
+    <hr/>
+  </div>
+</section>

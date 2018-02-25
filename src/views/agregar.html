@@ -1,0 +1,34 @@
+
+<section class="row">
+  <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
+    <div class="well">
+      <h1 class="text-center">Agregar Nuevo Usuario</h1>
+    </div>
+    <hr/>
+    <form>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input class="form-control" type="text" id="nombre" ng-model="usuario.nombre" name="nombre" placeholder="Nombre..."/>
+      </div>
+      <div class="form-group">
+        <label for="username">Usuario</label>
+        <input class="form-control" type="text" id="username" ng-model="usuario.username" name="username" placeholder="Usuario..."/>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="text" id="email" ng-model="usuario.email" name="email" placeholder="Email..."/>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input class="form-control" type="text" id="password" ng-model="usuario.password" name="password" placeholder="Contraseña..."/>
+      </div>
+      <div class="form-group">
+        <label for="privilegio">Privilegio</label>
+        <input class="form-control" type="text" id="privilegio" ng-model="usuario.privilegio" name="privilegio" placeholder="Privilegio..."/>
+      </div>
+      <button class="btn btn-primary" type="button" ng-click="goAgregar(usuario)">Agregar</button>
+      <button class="btn btn-danger" type="button" ng-click="goCancelar()">Cancelar</button>
+    </form>
+    <hr/>
+  </div>
+</section>
